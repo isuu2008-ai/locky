@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="스마트폰 과의존, 운동 미루기, 공부 미루기를 줄이는 하드코어 자기통제 앱 락키 Locky 베타 사전신청 페이지"
+    />
+    <title>락키 Locky | 베타 사전신청</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#signup">사전신청 영역으로 바로가기</a>
+
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-run" viewBox="0 0 64 64">
+        <circle cx="39" cy="11" r="6" fill="currentColor" />
+        <path d="M31 21h12l-6 13 13 8" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M31 21 20 31M32 35 22 52M37 34 28 44" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+        <path d="M10 54h18M42 54h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".45" />
+      </symbol>
+      <symbol id="icon-shorts" viewBox="0 0 64 64">
+        <rect x="15" y="7" width="34" height="50" rx="8" fill="currentColor" opacity=".18" />
+        <rect x="17" y="9" width="30" height="46" rx="7" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <rect x="23" y="17" width="18" height="24" rx="5" fill="currentColor" opacity=".24" />
+        <path d="m29 23 11 7-11 7z" fill="currentColor" />
+        <circle cx="32" cy="49" r="2.5" fill="currentColor" />
+        <path d="M50 17h4M50 25h4M50 33h4" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".65" />
+      </symbol>
+      <symbol id="icon-reels" viewBox="0 0 64 64">
+        <rect x="10" y="13" width="44" height="38" rx="12" fill="currentColor" opacity=".18" />
+        <rect x="10" y="13" width="44" height="38" rx="12" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <path d="M11 26h42M21 14l10 12M36 14l10 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+        <path d="m28 32 12 7-12 7z" fill="currentColor" />
+        <circle cx="49" cy="18" r="4" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-gamepad" viewBox="0 0 64 64">
+        <path d="M20 24h24c7 0 12 6 12 14v5c0 5-3 8-7 8-3 0-5-2-8-6H23c-3 4-5 6-8 6-4 0-7-3-7-8v-5c0-8 5-14 12-14Z" fill="currentColor" opacity=".18" />
+        <path d="M20 24h24c7 0 12 6 12 14v5c0 5-3 8-7 8-3 0-5-2-8-6H23c-3 4-5 6-8 6-4 0-7-3-7-8v-5c0-8 5-14 12-14Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M22 34v10M17 39h10" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+        <circle cx="42" cy="36" r="3" fill="currentColor" />
+        <circle cx="49" cy="42" r="3" fill="currentColor" />
+        <path d="M27 24v-5h10v5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-delay" viewBox="0 0 64 64">
+        <path d="M20 8h24M20 56h24M23 8c0 14 18 15 18 24S23 42 23 56M41 8c0 14-18 15-18 24s18 10 18 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M27 22h10l-5 6-5-6ZM26 48c4-7 8-7 12 0H26Z" fill="currentColor" opacity=".55" />
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 64 64">
+        <circle cx="30" cy="34" r="19" fill="currentColor" opacity=".14" />
+        <circle cx="30" cy="34" r="19" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <circle cx="30" cy="34" r="10" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <circle cx="30" cy="34" r="3" fill="currentColor" />
+        <path d="m41 23 12-12M44 11h9v9" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-shield-lock" viewBox="0 0 64 64">
+        <path d="M32 6 52 14v16c0 13-8 23-20 28C20 53 12 43 12 30V14l20-8Z" fill="currentColor" opacity=".16" />
+        <path d="M32 6 52 14v16c0 13-8 23-20 28C20 53 12 43 12 30V14l20-8Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <rect x="22" y="29" width="20" height="16" rx="4" fill="currentColor" opacity=".32" stroke="currentColor" stroke-width="3" />
+        <path d="M26 29v-5a6 6 0 0 1 12 0v5M32 36v4" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-verify" viewBox="0 0 64 64">
+        <rect x="15" y="9" width="34" height="46" rx="7" fill="currentColor" opacity=".16" />
+        <rect x="15" y="9" width="34" height="46" rx="7" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <path d="M24 8h16l2 7H22l2-7Z" fill="currentColor" opacity=".35" />
+        <path d="m24 35 6 6 13-15" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-trophy" viewBox="0 0 64 64">
+        <path d="M22 10h20v12c0 10-4 18-10 18s-10-8-10-18V10Z" fill="currentColor" opacity=".2" />
+        <path d="M22 10h20v12c0 10-4 18-10 18s-10-8-10-18V10ZM22 16h-8v6c0 6 4 10 10 10M42 16h8v6c0 6-4 10-10 10M32 40v8M23 54h18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="m32 17 3 6 6 1-5 4 2 7-6-4-6 4 2-7-5-4 6-1 3-6Z" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-app-lock" viewBox="0 0 64 64">
+        <rect x="12" y="8" width="40" height="48" rx="9" fill="currentColor" opacity=".14" />
+        <rect x="12" y="8" width="40" height="48" rx="9" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <rect x="20" y="18" width="8" height="8" rx="2" fill="currentColor" opacity=".45" />
+        <rect x="36" y="18" width="8" height="8" rx="2" fill="currentColor" opacity=".45" />
+        <rect x="21" y="34" width="22" height="15" rx="4" fill="currentColor" opacity=".28" stroke="currentColor" stroke-width="3" />
+        <path d="M26 34v-4a6 6 0 0 1 12 0v4M32 40v4" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-dumbbell" viewBox="0 0 64 64">
+        <path d="M8 26h8v12H8zM48 26h8v12h-8zM17 22h8v20h-8zM39 22h8v20h-8z" fill="currentColor" opacity=".25" />
+        <path d="M8 26h8v12H8zM48 26h8v12h-8zM17 22h8v20h-8zM39 22h8v20h-8zM25 32h14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M12 22v20M52 22v20" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-group" viewBox="0 0 64 64">
+        <circle cx="32" cy="19" r="8" fill="currentColor" opacity=".32" stroke="currentColor" stroke-width="3" />
+        <circle cx="17" cy="25" r="6" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="3" />
+        <circle cx="47" cy="25" r="6" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="3" />
+        <path d="M18 50c2-10 8-15 14-15s12 5 14 15M7 50c2-7 6-11 12-11M45 39c6 0 10 4 12 11" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-feedback" viewBox="0 0 64 64">
+        <path d="M10 13h44v29H33L21 54V42H10V13Z" fill="currentColor" opacity=".16" />
+        <path d="M10 13h44v29H33L21 54V42H10V13Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <rect x="24" y="20" width="16" height="17" rx="4" fill="currentColor" opacity=".32" stroke="currentColor" stroke-width="2.8" />
+        <path d="M27 30c3 3 7 3 10 0M28 25h.1M36 25h.1" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-streak" viewBox="0 0 64 64">
+        <path d="M34 6c3 11-7 14-7 22 0-4-4-7-8-8 2 8-7 12-7 22 0 10 8 17 20 17s20-8 20-19c0-13-12-18-18-34Z" fill="currentColor" opacity=".2" />
+        <path d="M34 6c3 11-7 14-7 22 0-4-4-7-8-8 2 8-7 12-7 22 0 10 8 17 20 17s20-8 20-19c0-13-12-18-18-34Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M26 47c3 4 10 4 13-1" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-coupon" viewBox="0 0 64 64">
+        <path d="M10 22c5 0 8-3 8-8h36v12a7 7 0 0 0 0 14v12H18c0-5-3-8-8-8V22Z" fill="currentColor" opacity=".16" />
+        <path d="M10 22c5 0 8-3 8-8h36v12a7 7 0 0 0 0 14v12H18c0-5-3-8-8-8V22Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M32 22v24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 5" opacity=".7" />
+        <path d="m25 30 4 4 9-10M25 43h13" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-phone-call" viewBox="0 0 64 64">
+        <path d="M32 6 52 14v16c0 13-8 23-20 28C20 53 12 43 12 30V14l20-8Z" fill="currentColor" opacity=".14" />
+        <path d="M32 6 52 14v16c0 13-8 23-20 28C20 53 12 43 12 30V14l20-8Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M24 21c-2 2-2 6 0 10 3 7 9 12 16 14 4 1 7 0 9-3l-6-6-5 3c-4-2-7-5-9-9l3-5-6-6-2 2Z" fill="currentColor" opacity=".34" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-privacy" viewBox="0 0 64 64">
+        <rect x="14" y="11" width="36" height="45" rx="7" fill="currentColor" opacity=".14" />
+        <rect x="14" y="11" width="36" height="45" rx="7" fill="none" stroke="currentColor" stroke-width="3.5" />
+        <path d="M23 26h18M23 36h10" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" opacity=".75" />
+        <rect x="25" y="39" width="18" height="13" rx="4" fill="currentColor" opacity=".28" stroke="currentColor" stroke-width="2.8" />
+        <path d="M29 39v-4a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 64 64">
+        <path d="M11 23h12l4-7h10l4 7h12v29H11V23Z" fill="currentColor" opacity=".16" />
+        <path d="M11 23h12l4-7h10l4 7h12v29H11V23Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <circle cx="32" cy="38" r="9" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="3.5" />
+        <path d="m39 49 4 4 9-10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-gift" viewBox="0 0 64 64">
+        <path d="M12 27h40v28H12zM9 19h46v10H9z" fill="currentColor" opacity=".16" />
+        <path d="M12 27h40v28H12zM9 19h46v10H9zM32 19v36" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M32 19c-8 0-13-4-13-8 0-3 3-5 6-5 5 0 7 6 7 13ZM32 19c8 0 13-4 13-8 0-3-3-5-6-5-5 0-7 6-7 13Z" fill="currentColor" opacity=".3" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+      </symbol>
+    </svg>
+
+    <header class="site-header" data-header>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="brand" href="#hero" aria-label="락키 홈">
+          <span class="brand-mark">락키</span>
+          <span class="brand-name">Locky</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="메뉴 열기"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu" data-nav-menu>
+          <a href="#problem">문제</a>
+          <a href="#how">작동방식</a>
+          <a href="#features">기능</a>
+          <a href="#pricing">가격</a>
+          <a
+            class="nav-cta"
+            href="https://forms.gle/vaefeZJ9auDYgCfGA"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-google-form-link
+          >
+            베타 사전신청
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Beta Recruiting · 예상 기능 공개</p>
+            <h1>쇼츠 볼<br />시간 있으면 <span>스쿼트나<br />하세요.</span></h1>
+            <p class="hero-subtitle">
+              락키는 운동·공부 미션을 완료하기 전까지 스마트폰 유혹을 줄여주는
+              하드코어 자기통제 앱입니다.
+            </p>
+            <p class="hero-note">의지로 버티지 말고, 시스템으로 막으세요.</p>
+
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://forms.gle/vaefeZJ9auDYgCfGA"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-google-form-link
+              >
+                <span>락키 베타 사전신청하기</span>
+                <span class="btn-icon" aria-hidden="true">▶</span>
+              </a>
+              <a class="btn btn-ghost" href="#how">
+                <span>작동 방식 보기</span>
+                <span class="btn-icon" aria-hidden="true">⌄</span>
+              </a>
+            </div>
+            <p class="google-form-note">신청은 Google Form으로 안전하게 접수됩니다.</p>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="락키 앱과 마스코트 콘셉트 그래픽">
+            <div class="phone-ui" aria-hidden="true">
+              <div class="phone-top">
+                <span>9:41</span>
+                <span>락키</span>
+              </div>
+              <div class="pill">베타 모드</div>
+              <div class="lock-ring">
+                <div class="lock-body">
+                  <span></span>
+                </div>
+              </div>
+              <h2>방해 앱 차단 중</h2>
+              <p>남은 미션 01:29:43</p>
+              <div class="mission-card">
+                <svg class="mission-icon icon-svg icon-mini" aria-hidden="true">
+                  <use href="#icon-run"></use>
+                </svg>
+                <div>
+                  <strong>러닝 3km 인증 대기</strong>
+                  <small>예상 기능 · 베타 테스트 예정</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="mascot-card" aria-hidden="true">
+              <div class="mascot">
+                <div class="mascot-head">
+                  <span class="brow left"></span>
+                  <span class="brow right"></span>
+                  <span class="eye left"></span>
+                  <span class="eye right"></span>
+                  <span class="mouth"></span>
+                </div>
+                <div class="mascot-neck"></div>
+                <div class="mascot-body">
+                  <span>LOCKY</span>
+                </div>
+                <div class="arm arm-left"></div>
+                <div class="arm arm-right"></div>
+                <div class="leg leg-left"></div>
+                <div class="leg leg-right"></div>
+              </div>
+              <strong>LOCKY</strong>
+              <p>의지는 약해도, 시스템은 강합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problem-section" id="problem">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Problem</p>
+          <h2>당신의 의지는 약한 게 아니라, 스마트폰이 너무 강한 겁니다.</h2>
+        </div>
+
+        <div class="problem-grid">
+          <article class="glass-card problem-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-shorts"></use></svg>
+            <h3>쇼츠 무한 스크롤</h3>
+            <p>멈출 수 없는 짧은 영상이 계획한 시간을 조용히 가져갑니다.</p>
+          </article>
+          <article class="glass-card problem-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-reels"></use></svg>
+            <h3>인스타 릴스</h3>
+            <p>하나만 보려던 피드가 공부 루틴을 계속 뒤로 밀어냅니다.</p>
+          </article>
+          <article class="glass-card problem-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-gamepad"></use></svg>
+            <h3>게임 접속</h3>
+            <p>접속 보상과 알림이 운동화 끈보다 먼저 손가락을 당깁니다.</p>
+          </article>
+          <article class="glass-card problem-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-delay"></use></svg>
+            <h3>공부/운동 미루기</h3>
+            <p>지금 하지 않으면 안 될 일을 내일의 나에게 넘기게 됩니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section how-section" id="how">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">How It Works</p>
+          <h2>락키는 이렇게 작동합니다.</h2>
+          <p>아래 흐름은 베타에서 검증할 예정인 핵심 사용 시나리오입니다.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step-card reveal">
+            <span class="step-number">1</span>
+            <svg class="icon-svg step-icon-svg" aria-hidden="true"><use href="#icon-target"></use></svg>
+            <h3>미션 선택</h3>
+            <p>운동 또는 공부 미션과 목표 시간을 설정합니다.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">2</span>
+            <svg class="icon-svg step-icon-svg" aria-hidden="true"><use href="#icon-shield-lock"></use></svg>
+            <h3>방해 앱 차단</h3>
+            <p>선택한 시간 동안 방해 앱 사용을 줄이도록 유도합니다.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">3</span>
+            <svg class="icon-svg step-icon-svg" aria-hidden="true"><use href="#icon-verify"></use></svg>
+            <h3>운동/공부 인증</h3>
+            <p>미션 수행 인증을 완료하면 성공 기록을 남깁니다.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">4</span>
+            <svg class="icon-svg step-icon-svg" aria-hidden="true"><use href="#icon-trophy"></use></svg>
+            <h3>성공 기록과 리워드</h3>
+            <p>기록이 쌓이고 포인트, 쿠폰, 랭킹 혜택을 받을 수 있습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section features-section" id="features">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Expected Features</p>
+          <h2>락키의 핵심 기능</h2>
+          <p>정식 출시 전, 베타 참여자 피드백에 따라 기능 범위가 조정될 수 있습니다.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-app-lock"></use></svg>
+            <h3>하드코어 앱 차단</h3>
+            <p>자유롭게 풀 수 없도록 강화된 잠금 경험을 개발 예정입니다.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-dumbbell"></use></svg>
+            <h3>운동/공부 인증</h3>
+            <p>러닝, 헬스, 독서, 집중 세션 등 다양한 인증을 지원할 예정입니다.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-group"></use></svg>
+            <h3>그룹 챌린지</h3>
+            <p>친구와 같은 목표를 걸고 서로의 성공 기록을 확인합니다.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-feedback"></use></svg>
+            <h3>락키 마스코트 피드백</h3>
+            <p>AI 기반 코멘트와 캐릭터 반응으로 루틴을 밀어붙입니다.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-streak"></use></svg>
+            <h3>연속 성공 기록</h3>
+            <p>연속 성공일과 미션 히스토리로 자기 통제력을 시각화합니다.</p>
+          </article>
+          <article class="feature-card reveal">
+            <svg class="icon-svg" aria-hidden="true"><use href="#icon-coupon"></use></svg>
+            <h3>포인트/쿠폰/랭킹 리워드</h3>
+            <p>성공할수록 제휴 혜택과 랭킹 보상을 확인할 수 있습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section trust-section" id="trust">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Trust</p>
+          <h2>안심하고 사용하세요.</h2>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <svg class="icon-svg trust-icon-svg" aria-hidden="true"><use href="#icon-phone-call"></use></svg>
+            <div>
+              <h3>긴급 연락은 가능</h3>
+              <p>가족·지인 연락처와 긴급 기능은 언제든 접근 가능하도록 설계 예정입니다.</p>
+            </div>
+          </article>
+          <article class="trust-card reveal">
+            <svg class="icon-svg trust-icon-svg" aria-hidden="true"><use href="#icon-privacy"></use></svg>
+            <div>
+              <h3>개인정보 최소 수집</h3>
+              <p>베타 신청과 서비스 안내에 필요한 정보만 최소한으로 수집합니다.</p>
+            </div>
+          </article>
+          <article class="trust-card reveal">
+            <svg class="icon-svg trust-icon-svg" aria-hidden="true"><use href="#icon-camera"></use></svg>
+            <div>
+              <h3>인증 사진 보호</h3>
+              <p>인증 사진은 검수 목적 외 사용하지 않는 방향으로 정책을 준비합니다.</p>
+            </div>
+          </article>
+          <article class="trust-card reveal">
+            <svg class="icon-svg trust-icon-svg" aria-hidden="true"><use href="#icon-gift"></use></svg>
+            <div>
+              <h3>건강한 리워드 구조</h3>
+              <p>베타 리워드는 포인트, 쿠폰, 랭킹, 제휴 혜택 중심으로 운영 예정입니다.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section pricing-section" id="pricing">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Pricing Preview</p>
+          <h2>예상 가격</h2>
+          <p>출시 전 가격과 기능은 변경될 수 있습니다.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <div class="price-head">
+              <h3>Free</h3>
+              <strong>0원</strong>
+            </div>
+            <ul>
+              <li>기본 미션</li>
+              <li>기본 잠금</li>
+              <li>기본 기록</li>
+              <li>커뮤니티 랭킹 참여</li>
+            </ul>
+          </article>
+
+          <article class="price-card pro reveal">
+            <div class="price-head">
+              <div>
+                <h3>PRO</h3>
+                <strong>월 1,900원</strong>
+              </div>
+              <span>예상</span>
+            </div>
+            <ul>
+              <li>하드코어 잠금</li>
+              <li>그룹 챌린지</li>
+              <li>상세 통계</li>
+              <li>락키 스킨</li>
+              <li>고급 인증</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section signup-section" id="signup">
+        <div class="signup-intro reveal">
+          <p class="eyebrow">Beta Waitlist</p>
+          <h2>베타 사전신청</h2>
+          <p>먼저 경험하고, 더 강한 습관을 만들어보세요.</p>
+          <ul>
+            <li>베타 오픈 알림을 가장 먼저 받아보세요.</li>
+            <li>의견을 남겨주시면 서비스에 반영됩니다.</li>
+            <li>특별한 베타 랭킹 리워드를 드려요.</li>
+          </ul>
+        </div>
+
+        <div class="signup-card reveal">
+          <p class="eyebrow">Google Form</p>
+          <h3>신청 정보는 Google Form에서 받습니다.</h3>
+          <p>
+            닉네임, 연락처, 사용 기기, 줄이고 싶은 앱, 참여 의향까지 한 번에 접수됩니다.
+            새 탭에서 열리는 폼을 작성하면 베타 대기명단에 등록됩니다.
+          </p>
+          <a
+            class="btn btn-primary signup-link"
+            href="https://forms.gle/vaefeZJ9auDYgCfGA"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-google-form-link
+          >
+            <span>Google Form에서 베타 신청하기</span>
+            <span class="btn-icon" aria-hidden="true">▶</span>
+          </a>
+          <p class="google-form-note form-google-note">신청은 Google Form으로 안전하게 접수됩니다.</p>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>자주 묻는 질문</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>진짜 폰이 잠기나요?</summary>
+            <p>
+              베타에서는 OS 정책을 지키는 범위 안에서 방해 앱 접근을 줄이는 잠금 경험을
+              테스트할 예정입니다. 실제 동작 방식은 기기와 권한에 따라 달라질 수 있습니다.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>긴급 상황에서는 어떻게 하나요?</summary>
+            <p>
+              긴급 연락, 가족·지인 연락처, 필수 앱 접근은 가능한 방향으로 설계하고 있습니다.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>iPhone도 되나요?</summary>
+            <p>
+              iOS와 Android 모두 지원을 목표로 개발 예정이며, 초기 베타 지원 범위는 추후 안내됩니다.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>돈을 걸어야 하나요?</summary>
+            <p>
+              아니요. 락키 베타는 포인트, 쿠폰, 랭킹, 제휴 혜택 중심의 리워드 구조를 준비하고 있습니다.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>베타는 언제 시작하나요?</summary>
+            <p>
+              사전신청자에게 우선 안내할 예정입니다. 정확한 일정은 개발 진행 상황에 맞춰 공유됩니다.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#hero" aria-label="락키 홈">
+        <span class="brand-mark">락키</span>
+        <span class="brand-name">Locky</span>
+      </a>
+      <p>베타 테스트용 프로젝트명이며, 공식 출시 전 브랜드명은 변경될 수 있습니다.</p>
+      <small>© 2026 Locky. All rights reserved.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
